@@ -1,5 +1,5 @@
-create database BooksDB;
-use BooksDB;
+create database Books;
+use Books;
 create table Publisher(
 pname varchar(15),
 phone int,
