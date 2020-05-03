@@ -1,5 +1,5 @@
-create database OrderDB;
-use OrderDB;
+create database Order;
+use Order;
 create table salesman(
 salesman_id int,
 sname varchar(15), 
