@@ -36,6 +36,13 @@ primary key(loan_number),
 foreign key (branch_name) references Branch(branch_name));
 insert into Loan values(1,"SBI_Chamrajpet",1000),(2,"SBI_ResidencyRoad",2000),(3,"SBI_ShivajiRoad",3000),(4,"SBI_ParliamentRoad",4000),(5,"SBI_Jantarmantar",5000);
 select * from Loan;
+create table Borrower(
+customer_name varchar(30),
+loan_number int,
+primary key(customer_name,loan_number),
+foreign key(customer_name) references BankCustomer(customer_name),
+foreign key(loan_number) references Loan(loan_number),
+insert into Borrower values("Avinash",1),("Dinesh",2),("Mohan",3),("Nikhil",4),("Ravi",5);	
 select c.customer_name
 from BankCustomer c where exists(
 									select d.customer_name,count(d.customer_name)
